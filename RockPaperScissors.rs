@@ -17,8 +17,8 @@ fn human_play() -> i32 {
 fn comp_play() -> i32 {
     let mut rng = rand::thread_rng();
     let range = Range::new(1,3);
-    let value = range.ind_sample(&mut rng);
-    value
+    let num = range.ind_sample(&mut rng);
+    num
 }
 
 fn compare(hplay: i32, cplay: i32) -> String {
