@@ -15,5 +15,4 @@ fn main() {
         println!("{}{}", i, fs);
     }
     println!("{}", joined);
-
 }
