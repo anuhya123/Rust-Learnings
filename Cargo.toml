@@ -1,0 +1,12 @@
+[package]
+name = "Rust"
+version = "0.1.0"
+authors = ["Pranavya <lomdom12345@gmail.com>"]
+
+[dependencies]
+rand = "0.3"
+
+[[bin]]
+name = "RockPaperScissors"
+path = "RockPaperScissors.rs"
+
