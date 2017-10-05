@@ -1,24 +1,18 @@
-use std::io;
-
 fn main() {
-  //reading the polynomial
-  let mut polynomial = String::new();
-  
-  io::stdin().read_line(&mut polynomial)
-      .ok()
-      .expect("Failed to read!");
-  
-  println!("{}", polynomial);
-  
-  //checking the first character0.
-  let polyAppend = concat!("+", polynomial);
-  println!("{}", polyAppend);*-
-
-  //splitting it at +
-  let list = polynomial.split("+");
-  for i in list {
-      println!("{}", i); 
-  }
-  let ch = list.chars().nth(0).unwrap();
-  println!("{}", ch);
+    use std::io::{stdin,stdout,Write};
+    let mut s=String::new();
+    print!("Enter polynomial: ");
+    let _=stdout().flush();
+    stdin().read_line(&mut s).expect("Did not enter a correct string");
+    let result = str::replace(&s, "-", "+-");
+    let joined = format!("{}{}","+", &result);
+    let l = s.split("");
+    let fs = "";
+    for i in l {
+        if i == "+" {
+            format!("{}{}", "+", &fs);
+        }
+        println!("{}{}", i, fs);
+    }
+    println!("{}", joined);
 }
